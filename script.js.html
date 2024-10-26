@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>script.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #82b1ff;}
+.s1 { color: #ffffff;}
+.s2 { color: #6a8759;}
+.s3 { color: #75715e; font-style: italic;}
+</style>
+</head>
+<body bgcolor="#090909">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+script.js</font>
+</center></td></tr></table>
+<pre><span class="s0">function </span><span class="s1">moveRandomEl(elm) {</span>
+  <span class="s1">elm.style.position = </span><span class="s2">&quot;absolute&quot;</span><span class="s1">;</span>
+
+  <span class="s3">// Calculate maximum top and left values to keep the element within the viewport</span>
+  <span class="s1">const maxTop = window.innerHeight - elm.offsetHeight;</span>
+  <span class="s1">const maxLeft = window.innerWidth - elm.offsetWidth;</span>
+
+  <span class="s3">// Set random position while keeping the element within viewport bounds</span>
+  <span class="s1">elm.style.top = Math.floor(Math.random() * maxTop) + </span><span class="s2">&quot;px&quot;</span><span class="s1">;</span>
+  <span class="s1">elm.style.left = Math.floor(Math.random() * maxLeft) + </span><span class="s2">&quot;px&quot;</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">const moveRandom = document.querySelector(</span><span class="s2">&quot;#move-random&quot;</span><span class="s1">);</span>
+
+<span class="s1">moveRandom.addEventListener(</span><span class="s2">&quot;mouseenter&quot;</span><span class="s1">, </span><span class="s0">function </span><span class="s1">(e) {</span>
+  <span class="s1">moveRandomEl(e.target);</span>
+<span class="s1">});</span>
+</pre>
+</body>
+</html>

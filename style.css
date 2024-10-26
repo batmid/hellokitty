@@ -1,0 +1,73 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe5e5;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 500px;
+  margin: 20px;
+}
+
+/* GIF Embed */
+.container .tenor-gif-embed {
+  max-width: 100%; /* Makes GIF responsive */
+  width: 200px; /* Default width */
+}
+
+/* Button Container */
+.container .btn {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+}
+
+/* Buttons */
+.btn a {
+  text-decoration: none;
+  color: #111;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0.5rem 1rem 3rem rgba(0, 0%, 0%, 0.3);
+  transition: background 0.3s;
+}
+
+.btn a:hover {
+  background: #f0f0f0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 375px) {
+  .container {
+    max-width: 90%;
+    gap: 15px;
+  }
+
+  /* Adjust button padding and gap for smaller screens */
+  .btn a {
+    padding: 8px 15px;
+  }
+
+  /* Adjust GIF size for smaller screens */
+  .container .tenor-gif-embed {
+    width: 150px;
+  }
+}
